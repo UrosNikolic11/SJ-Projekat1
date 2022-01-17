@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0%;
+}
+
+.navbar {
+    height: 75px;
+    width: 100%;
+  position: relative;
+  background-image: -webkit-linear-gradient(right, #264653, 0%, #2a9d8f, 100%);
+    background-image: -moz-linear-gradient(right, #264653 0%, #2a9d8f 100%);
+    background-image: linear-gradient(to right, #264653 0%, #2a9d8f 100%);
+}
+
+.navbar-header {
+    display: inline;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.navbar-title {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+  padding-left: 10%;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar-responsive-button {
+    display: none;
+  padding-right: 2%;
+}
+
+.navbar-links {
+    display: inline;
+    float: right;
+    font-size: 20px;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.navbar-links > a {
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.navbar-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  color: #d3d3d3
+}
+
+#navbar-checkbox {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .navbar-responsive-button {
+        display: inline-block;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .navbar-responsive-button > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+  .navbar-responsive-button > label:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    color: #d3d3d3
+    }
+  
+  #navbar-checkbox:checked ~ .navbar-responsive-button > label {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hamburger-icon {
+        display: block;
+        height: 10px;
+        width: 25px;
+        border-top: 3px solid #eeeeee;
+    }
+
+    .navbar-links {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 0%;
+    top: 50%;
+        left: 0%;
+    transform: translate(0, -4%);
+    transition: all 0.2s linear;
+        overflow-y: hidden;
+    background-color: #3a3a3a;
+    }
+
+    .navbar-links > a {
+        display: block;
+        width: 100%;
+    }
+
+    #navbar-checkbox:checked ~ .navbar-links {
+        height: 100vh;
+    overflow-y: auto;
+    }
+
+    #navbar-checkbox:not(:checked) ~ .navbar-links {
+        height: 0%;
+    }
+    #batoniUser{
+        position: relative;
+        max-width: 60rem;
+        margin: 1.1rem auto;
+        padding: .9rem;
+        border-radius: 4px;
+        justify-content: space-between;
+        align-items: center;
+        height: 500px;
+    }
+
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Admin panel</title>
+    <script src="./js/user.js"></script>
+</head>
+<body onload="init()">
+    <div class="navbar">
+        <input type="checkbox" id="navbar-checkbox">
+        <div class="navbar-header">
+          <div class="navbar-title">
+          </div>
+        </div>
+        <div class="navbar-responsive-button">
+          <label for="navbar-checkbox">
+            <span class="hamburger-icon"></span>
+            <span class="hamburger-icon"> </span>
+            <span class="hamburger-icon"></span>
+          </label>
+        </div>
+        <div class="navbar-links">
+          <a href="/admin/user">Korisnici</a>
+          <a href="/admin/shoes">Patike</a>
+          <a href="/admin/ball">Lopte</a>
+          <a href="/admin/brand">Brendovi</a>
+          <a id="logout" href="#">Log out</a>
+        </div>
+     </div>
+      <div id="addUserForm">
+            <form action="#">
+              <div class="user-details">
+                <div class="input-box">
+                  <span class="details">Ime</span>
+                  <input id="addIme" type="text" placeholder="Ime" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Prezime</span>
+                  <input id="addPrezime" type="text" placeholder="Prezime" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Email</span>
+                  <input id="addEmail"type="text" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Username</span>
+                  <input id="addUsername" type="text" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Password</span>
+                  <input id="addPassword" type="text" placeholder="Password" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Admin</span>
+                  <input id="addAdmin" type="text" placeholder="Admin" required>
+                </div>
+                <button id="addBtn" type="submit">Registruj korisnika</button>
+      </div>
+     </form>
+    </div>
+    
+    <select id="UserSelect">
+   </select>
+
+   <button id="choose" type="submit">Izaberi korisnika</button>
+
+    <div id="updateUserForm">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Ime</span>
+            <input id="updateIme" type="text" placeholder="Ime" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Prezime</span>
+            <input id="updatePrezime" type="text" placeholder="Prezime" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input id="updateEmail"type="text" placeholder="Email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input id="updateUsername" type="text" placeholder="Username" required>
+          </div>   
+</div>
+</form>
+</div>
+<div>
+    <button id="updateBtn" type="submit" disabled>Izmenite Korisnika</button>
+   <button type="submit" class="btn btn-primary" id="deleteUserButton" disabled>Obrisite korisnika</button>
+</div>
+    
+</body>
+</html>

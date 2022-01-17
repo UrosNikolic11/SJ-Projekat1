@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Admin panel</title>
+    <script src="./js/brand.js"></script>
+</head>
+<body>
+    <body onload="init()">
+        <div class="navbar">
+            <input type="checkbox" id="navbar-checkbox">
+            <div class="navbar-header">
+              <div class="navbar-title">
+              </div>
+            </div>
+            <div class="navbar-responsive-button">
+              <label for="navbar-checkbox">
+                <span class="hamburger-icon"></span>
+                <span class="hamburger-icon"> </span>
+                <span class="hamburger-icon"></span>
+              </label>
+            </div>
+            <div class="navbar-links">
+                <a href="/admin/user">Korisnici</a>
+                <a href="/admin/shoes">Patike</a>
+                <a href="/admin/ball">Lopte</a>
+                <a href="/admin/brand">Brendovi</a>
+              <a id="logout" href="#">Log out</a>
+            </div>
+         </div>
+          <div id="addUserForm">
+                <form action="#">
+                  <div class="user-details">
+                    <div class="input-box">
+                      <span class="details">Naziv</span>
+                      <input id="addNaziv" type="text" placeholder="Naziv" required>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Godina osnivanja</span>
+                      <input id="addGodinaOsnivanja" type="text">
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Osnivac</span>
+                      <input id="addOsnivac" type="text" placeholder="Osnivac" required>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Zemlja porekla</span>
+                      <input id="addZemlja" type="text" placeholder="Zemlja porekla" required>
+                    </div>
+                    <button id="addBrandBtn" type="submit">Dodaj brend</button>
+          </div>
+         </form>
+        </div>
+        
+        <select id="BrandSelect">
+       </select>
+    
+       <button id="chooseBrand" type="submit">Izaberi brand</button>
+    
+        <div id="updateUserForm">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Naziv</span>
+                <input id="updateNaziv" type="text" placeholder="Naziv" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Zemlja</span>
+                <input id="updateZemlja"type="text" placeholder="Zemlja porekla" required>
+              </div>
+    </div>
+    </form>
+    </div>
+    <div>
+        <button id="updateBrandBtn" type="submit" disabled>Izmenite brand</button>
+       <button type="submit" class="btn btn-primary" id="deleteBrandButton" disabled>Obrisite brand</button>
+    </div>
+</body>
+</html>

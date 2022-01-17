@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Admin panel</title>
+    <script src="./js/ball.js"></script>
+</head>
+<body>
+    <body onload="init()">
+        <div class="navbar">
+            <input type="checkbox" id="navbar-checkbox">
+            <div class="navbar-header">
+              <div class="navbar-title">
+              </div>
+            </div>
+            <div class="navbar-responsive-button">
+              <label for="navbar-checkbox">
+                <span class="hamburger-icon"></span>
+                <span class="hamburger-icon"> </span>
+                <span class="hamburger-icon"></span>
+              </label>
+            </div>
+            <div class="navbar-links">
+                <a href="/admin/user">Korisnici</a>
+                <a href="/admin/shoes">Patike</a>
+                <a href="/admin/ball">Lopte</a>
+                <a href="/admin/brand">Brendovi</a>
+              <a id="logout" href="#">Log out</a>
+            </div>
+         </div>
+          <div id="addUserForm">
+                <form action="#">
+                  <div class="user-details">
+                    <div class="input-box">
+                      <span class="details">Naziv</span>
+                      <input id="addNazivLopta" type="text" placeholder="Naziv" required>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Cena</span>
+                      <input id="addCena" type="text" placeholder="Cena">
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Velicina</span>
+                      <input id="addVelicina" type="text" placeholder="Velicina" required>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Sport</span>
+                      <input id="addSport" type="text" placeholder="Sport" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Opis</span>
+                        <input id="addOpis" type="text" placeholder="Opis" required>
+                    </div>
+                    
+          </div>
+         </form>
+        </div>
+        <span>Brand</span>
+        <select id="BrandSelectLopta">
+       </select>
+    
+       <button id="addBall" type="submit">Dodaj loptu</button>
+
+       <br><br><br>
+
+       <select id="LoptaSelect">
+        </select>
+
+       <button id="chooseLopta" type="submit">Izaberi loptu</button>
+    
+        <div id="updateUserForm">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Naziv</span>
+                <input id="updateNazivLopta" type="text" placeholder="Naziv" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Cena</span>
+                <input id="updateCena"type="text" placeholder="Cena" required>
+              </div>
+    </div>
+    </form>
+    </div>
+    <div>
+        <button id="updateLoptaBtn" type="submit" disabled>Izmenite loptu</button>
+       <button type="submit" class="btn btn-primary" id="deleteLoptaButton" disabled>Obrisite loptu</button>
+    </div>
+</body>
+</html>
